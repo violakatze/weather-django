@@ -1,0 +1,26 @@
+{% load static %} {% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% bootstrap_css %} {% bootstrap_javascript %}
+    <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'app:index' %}">weather-django</a>
+      </div>
+    </nav>
+    <div class="container container-lg">
+      {% block content %} {% endblock content %}
+    </div>
+  </body>
+</html>

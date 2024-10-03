@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <h3>{{title}}</h3>
+  <table class="table table-bordered table-responsive-sm">
+    <thead>
+      <tr class="text-center">
+        {% for day in day_of_weeks %}
+        <th>{{day}}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for forecast in forecasts %}
+        <td class="text-center">
+          {% if forecast == 1 %}
+          <span class="material-symbols-outlined"> cloud </span>
+          {% elif forecast == 2 %}
+          <span class="material-symbols-outlined text-primary">
+            beach_access
+          </span>
+          {% else %}
+          <span class="material-symbols-outlined text-danger"> sunny </span>
+          {% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+  <a href="{% url 'app:index' %}">戻る</a>
+</div>
+{% endblock content %}

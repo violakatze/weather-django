@@ -1,0 +1,68 @@
+[
+    {
+        "model": "app.city",
+        "pk": 1,
+        "fields": {
+            "name": "東京"
+        }
+    },
+    {
+        "model": "app.city",
+        "pk": 2,
+        "fields": {
+            "name": "大阪"
+        }
+    },
+    {
+        "model": "app.city",
+        "pk": 3,
+        "fields": {
+            "name": "福岡"
+        }
+    },
+    {
+        "model": "app.week",
+        "pk": 1,
+        "fields": {
+            "city_id": 1,
+            "order": 1,
+            "sunday": 0,
+            "monday": 0,
+            "tuesday": 0,
+            "wednesday": 1,
+            "thursday": 1,
+            "friday": 2,
+            "saturday": 2
+        }
+    },
+    {
+        "model": "app.week",
+        "pk": 2,
+        "fields": {
+            "city_id": 2,
+            "order": 1,
+            "sunday": 0,
+            "monday": 1,
+            "tuesday": 2,
+            "wednesday": 0,
+            "thursday": 1,
+            "friday": 2,
+            "saturday": 0
+        }
+    },
+    {
+        "model": "app.week",
+        "pk": 3,
+        "fields": {
+            "city_id": 3,
+            "order": 1,
+            "sunday": 2,
+            "monday": 2,
+            "tuesday": 1,
+            "wednesday": 1,
+            "thursday": 0,
+            "friday": 0,
+            "saturday": 0
+        }
+    }
+]
